@@ -1,5 +1,7 @@
+// Không cần require 'node-fetch' nữa
+// const fetch = require('node-fetch'); // Bỏ dòng này
+
 const express = require('express');
-const fetch = require('node-fetch');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -9,7 +11,7 @@ app.post('/query', async (req, res) => {
   const { query } = req.body;
 
   try {
-    const response = await fetch('http://LAPTOP-E3NJJ9JU:7200/repositories/sandwich_repo', {
+    const response = await fetch('http://localhost:7200/repositories/sandwich-ontology', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/sparql-query',
