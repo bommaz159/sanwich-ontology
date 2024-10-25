@@ -11,7 +11,7 @@ app.post('/query', async (req, res) => {
   const { query } = req.body;
 
   try {
-    const response = await fetch('http://localhost:7200/repositories/sandwich-ontology', {
+    const response = await fetch('http://localhost:7200/repositories/sandwich_repo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/sparql-query',
