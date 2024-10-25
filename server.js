@@ -23,7 +23,7 @@ app.post('/query', async (req, res) => {
     res.json(data);
   } catch (error) {
     console.error('Error querying GraphDB:', error);
-    res.status(500).send('Error querying GraphDB');
+    res.status(500).send(`Error querying GraphDB: ${error.message}`);
   }
 });
 
