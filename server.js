@@ -1,10 +1,9 @@
-// Không cần require 'node-fetch' nữa
-// const fetch = require('node-fetch'); // Bỏ dòng này
-
 const express = require('express');
+const cors = require('cors'); // Thêm dòng này
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors()); // Thêm dòng này để cho phép tất cả các nguồn truy cập
 app.use(express.json());
 
 app.post('/query', async (req, res) => {

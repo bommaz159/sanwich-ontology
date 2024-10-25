@@ -6,7 +6,7 @@ function App() {
 
   const handleQuery = async () => {
     try {
-      const response = await fetch('https://sanwich-ontology-1.onrender.com', {
+      const response = await fetch('https://sanwich-ontology-1.onrender.com/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
